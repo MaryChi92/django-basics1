@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/Django-4.0.4.dist-info/AUTHORS" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/Django-4.0.4.dist-info/INSTALLER" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/Django-4.0.4.dist-info/LICENSE" beforeDir="false" />
@@ -4733,6 +4734,64 @@
       <change beforePath="$PROJECT_DIR$/env/Scripts/pythonw.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/env/Scripts/sqlformat.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/env/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geekshop/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geekshop/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geekshop/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geekshop/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geekshop/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geekshop/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/app-store.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/controll.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/controll1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/controll2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/google-play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/icon-hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/mobile-back.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-1-lg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-2-sm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-3-sm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-4-sm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-5-sm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/product-61.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/promo-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/promo-img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slider-hotdeal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slider.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/slider1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/social-links.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -4821,7 +4880,7 @@
       <workItem from="1652793198687" duration="4905000" />
       <workItem from="1652814906761" duration="897000" />
       <workItem from="1652940276211" duration="7532000" />
-      <workItem from="1652963424398" duration="4140000" />
+      <workItem from="1652963424398" duration="4508000" />
     </task>
     <servers />
   </component>
