@@ -1,0 +1,20 @@
+<div class="location">
+    {% for contact in contacts %}
+        <div class="location-1">
+            <i class="fa fa-map-marker fa-5x"></i>
+            <h4>{{ contact.city }}</h4>
+            <div class="contacts">
+                <h5>{{ contact.type_1 }}</h5>
+                <p>{{ contact.number }}</p>
+            </div>
+            <div class="contacts">
+                <h5>{{ contact.type_2 }}</h5>
+                <p>{{ contact.email }}</p>
+            </div>
+            <div class="contacts">
+                <h5>{{ contact.type_3 }}</h5>
+                <p>{{ contact.address }}</p>
+            </div>
+        </div>>
+    {% endfor %}
+</div>

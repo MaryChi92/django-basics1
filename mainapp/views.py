@@ -1,3 +1,5 @@
+import json
+
 from django.shortcuts import render
 
 
@@ -6,8 +8,26 @@ def index(request):
 
 
 def products(request):
-    return render(request, 'mainapp/products.html')
+    links_menu = [
+        {'href': 'products_all', 'title': 'все'},
+        {'href': 'products_home', 'title': 'дом'},
+        {'href': 'products_office', 'title': 'офис'},
+        {'href': 'products_modern', 'title': 'модерн'},
+        {'href': 'products_classic', 'title': 'классика'},
+    ]
+
+    context = {
+        'links_menu': links_menu
+    }
+    return render(request, 'mainapp/products.html', context)
 
 
 def contact(request):
-    return render(request, 'mainapp/contact.html')
+    with open('contacts.json') as contacts_json:
+        contacts = json.load(contacts_json)
+
+        context = {
+            'contacts': contacts
+        }
+
+    return render(request, 'mainapp/contact.html', context)
