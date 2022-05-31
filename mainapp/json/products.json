@@ -1,0 +1,74 @@
+[
+  {
+    "category": "дом",
+    "name": "Дом1",
+    "image": "product/product-1.jpg",
+    "short_desc": "Кратко о дом1",
+    "description": "Подробно о дом1",
+    "price": 1500.0,
+    "quantity": 11
+  },
+  {
+    "category": "дом",
+    "name": "Дом2",
+    "image": "product/product-2.jpg",
+    "short_desc": "Кратко о дом2",
+    "description": "Подробно о дом2",
+    "price": 1300.0,
+    "quantity": 11
+  },
+  {
+    "category": "офис",
+    "name": "Офис1",
+    "image": "product/product-3.jpg",
+    "short_desc": "Кратко об офис1",
+    "description": "Подробно об офис1 ",
+    "price": 3000.0,
+    "quantity": 11
+  },
+  {
+    "category": "офис",
+    "name": "Офис2",
+    "image": "product/product-4.jpg",
+    "short_desc": "Кратко об офис2",
+    "description": "Подробно об офис2",
+    "price": 900.0,
+    "quantity": 11
+  },
+  {
+    "category": "модерн",
+    "name": "Модерн1",
+    "image": "product/product-11.jpg",
+    "short_desc": "Кратко о модерн1",
+    "description": "Подробно о модерн1",
+    "price": 5500.0,
+    "quantity": 11
+  },
+  {
+    "category": "модерн",
+    "name": "Модерн2",
+    "image": "product/product-21.jpg",
+    "short_desc": "Кратко о модерн2",
+    "description": "Подробно о модерн2",
+    "price": 1900.0,
+    "quantity": 11
+  },
+  {
+    "category": "классика",
+    "name": "Классика1",
+    "image": "product/product-31.jpg",
+    "short_desc": "Кратко о классика1",
+    "description": "Подробно о классика1",
+    "price": 9000.0,
+    "quantity": 11
+  },
+  {
+    "category": "классика",
+    "name": "Классика2",
+    "image": "product/product-41.jpg",
+    "short_desc": "Кратко о классика2",
+    "description": "Подробно о классика2",
+    "price": 2300.0,
+    "quantity": 11
+  }
+]
