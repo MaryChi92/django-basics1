@@ -28,7 +28,7 @@
 			<div class="tab-content">
                 {% for product in products %}
 				<div class="block">
-					<a href="#"><img src="{% if product.image %}/media/{{ product.image }}{% else %}{% static 'img/../../../media/product/product-1.jpg' %}{% endif %}" alt="">
+					<a href="{% url 'basket:add' product.pk %}"><img src="{% if product.image %}/media/{{ product.image }}{% else %}{% static 'img/../../../media/product/product-1.jpg' %}{% endif %}" alt="">
 						<div class="text">
 							<img src="{% static 'img/icon-hover.png' %}" alt="img">
 							<h4>{{ product.name }}</h4>
