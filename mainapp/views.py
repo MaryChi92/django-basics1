@@ -2,17 +2,9 @@ import json
 
 from django.shortcuts import render, get_object_or_404
 
-from basketapp.models import Basket
 from geekshop.settings import BASE_DIR
 from mainapp.models import Product, Category
-
-
-def get_basket(user):
-    basket_list = 0
-    if user.is_authenticated:
-        basket_list = sum(list(Basket.objects.filter(user=user).values_list('quantity', flat=True)))
-
-    return basket_list
+from mainapp.services import get_basket, get_hot_product, get_same_products
 
 
 def index(request):
@@ -44,14 +36,27 @@ def products(request, pk=None):
 
         return render(request, 'mainapp/products_list.html', context)
 
+    hot_product = get_hot_product()
+    same_products = get_same_products(hot_product)
     context = {
         'links_menu': links_menu,
         'basket': get_basket(request.user),
-        'hot_product': Product.objects.all().order_by('?').first(),
-        'same_products': Product.objects.all().order_by('?')[3:5]
+        'hot_product': hot_product,
+        'same_products': same_products
     }
 
     return render(request, 'mainapp/products.html', context)
+
+
+def product(request, pk):
+    product_item = get_object_or_404(Product, pk=pk)
+    context = {
+        'links_menu': Category.objects.all(),
+        'product': product_item,
+        'basket': get_basket(request.user)
+    }
+
+    return render(request, 'mainapp/product.html', context)
 
 
 def contact(request):
