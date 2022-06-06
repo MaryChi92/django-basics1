@@ -4,6 +4,11 @@
     <li><a href="{% url 'products:products_hot_product' %}" {% if request.resolver_match.url_name == 'products' %}class="active"{% endif %}>продукты</a></li>
     <li><a href="{% url 'contact' %}" {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}>контакты</a></li>
     {% if user.is_authenticated %}
+        {% if user.is_superuser %}
+            <li>
+                <a href="{% url 'adminapp:user_read' %}">Админка</a>
+            </li>
+        {% endif %}
         <li>
             <a href="{% url 'authapp:edit' %}">{{ user.first_name|default:'Пользователь' }}</a>
         </li>
