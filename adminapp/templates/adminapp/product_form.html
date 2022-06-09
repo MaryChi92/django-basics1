@@ -1,0 +1,14 @@
+{% extends 'adminapp/base.html' %}
+{% load crispy_forms_filters %}
+{% block content %}
+    <div class="row">
+    <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form class="form-horizontal" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="form-control btn btn-primary">Сохранить</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
