@@ -34,12 +34,19 @@ class ShopUserRegisterForm(UserCreationForm):
 
         return current_age
 
+    def clean_email(self):
+        current_email = self.cleaned_data['email']
+        if ShopUser.objects.filter(email=current_email).exists():
+            raise forms.ValidationError('Пользователь с таким email уже зарегистрирован')
 
-class ShopUserEditForm(UserCreationForm):
+        return current_email
+
+
+class ShopUserEditForm(UserChangeForm):
 
     class Meta:
         model = ShopUser
-        fields = ('username', 'first_name', 'last_name', 'email', 'age', 'avatar', 'password1', 'password2',)
+        fields = ('username', 'first_name', 'last_name', 'email', 'age', 'avatar', 'password',)
 
     def __int__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

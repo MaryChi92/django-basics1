@@ -20,12 +20,13 @@ from django.conf import settings
 from mainapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-
+    # path('admin/', admin.site.urls),
+    path('admin/', include('adminapp.urls', namespace='adminapp')),
     path('', views.index, name='index'),
 
     path('products/', include('mainapp.urls', namespace='products')),
     path('auth/', include('authapp.urls', namespace='authapp')),
+    path('basket/', include('basketapp.urls', namespace='basket')),
 
     path('contact/', views.contact, name='contact'),
 ]

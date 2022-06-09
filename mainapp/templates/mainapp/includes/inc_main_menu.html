@@ -4,6 +4,11 @@
     <li><a href="{% url 'products:products_hot_product' %}" {% if request.resolver_match.url_name == 'products' %}class="active"{% endif %}>продукты</a></li>
     <li><a href="{% url 'contact' %}" {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}>контакты</a></li>
     {% if user.is_authenticated %}
+        {% if user.is_superuser %}
+            <li>
+                <a href="{% url 'adminapp:user_read' %}">Админка</a>
+            </li>
+        {% endif %}
         <li>
             <a href="{% url 'authapp:edit' %}">{{ user.first_name|default:'Пользователь' }}</a>
         </li>
@@ -17,4 +22,11 @@
     {% endif %}
 </ul>
 <a href="#" class="search"></a>
-<a href="#" class="basket"></a>
+<a href="{% url 'basket:list' %}" class="basket">
+    <span style="display: block; margin-left: 30px; color: black">
+        {% if basket %}
+            {{ basket.0.total_cost|floatformat:0 }} руб
+            ({{ basket.0.total_quantity }} шт)
+        {% endif %}
+    </span>
+</a>
