@@ -1,0 +1,15 @@
+{% extends 'adminapp/base.html' %}
+
+{% block content %}
+    <div class="row">
+    <div class="col-md-3"></div>
+        <div class="col-md-6">
+            Удалить товар {{ object.name }} ({{ object.category.name }})?
+            <form method="post">
+                {% csrf_token %}
+                <button class="btn btn-danger">Да</button>
+                <a class="btn btn-info" href="{% url 'adminapp:product_detail' object.pk %}">Нет</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}
