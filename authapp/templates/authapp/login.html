@@ -10,4 +10,9 @@
         <button class="btn btn-primary" type="submit">Войти</button>
     </form>
     <a class="btn btn-info" href="{% url 'authapp:register' %}" style="width: 100%;">Зарегистрироваться</a>
+    <button class="btn btn-round form-control">
+        <a class="btn btn-info" href="{% url 'social:begin' 'vk-oauth2' %}?next=/">
+            Вход через ВКонтакте
+        </a>
+    </button>
 {% endblock %}
