@@ -3,7 +3,8 @@
 {% block content %}
     <form class="form-horizontal col-10" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ edit_form.as_p }}
+        {{ profile_form.as_p }}
         <button class="btn btn-primary" type="submit">Сохранить</button>
     </form>
     <a class="btn btn-link" href="{% url 'index' %}" style="width: 100%;">На главную</a>

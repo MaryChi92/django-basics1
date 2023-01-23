@@ -1,0 +1,13 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGRqYW5nbzI4?=
+From: webmaster@localhost
+To: django28@gb.local
+Date: Wed, 14 Sep 2022 12:38:07 -0000
+Message-ID: <166315908713.12172.8483042733716857623@LAPTOP-G3HS65PJ>
+
+Для подтверждения учетной записи django28 на портале http://localhost:8000 перейдите по ссылке: http://localhost:8000/auth/verify/django28@gb.local/b08fdca5c72ca65a88ab5c0fe47d47f8b9e81220/
+-------------------------------------------------------------------------------

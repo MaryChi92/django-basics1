@@ -1,7 +1,10 @@
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from django import forms
 
-from authapp.models import ShopUser
+from authapp.models import ShopUser, ShopUserProfile
+
+from random import random
+from hashlib import sha1
 
 
 class ShopUserLoginForm(AuthenticationForm):
@@ -10,7 +13,7 @@ class ShopUserLoginForm(AuthenticationForm):
         model = ShopUser
         fields = ('username', 'password',)
 
-    def __int__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
@@ -22,7 +25,7 @@ class ShopUserRegisterForm(UserCreationForm):
         model = ShopUser
         fields = ('username', 'first_name', 'last_name', 'email', 'age', 'avatar', 'password1', 'password2',)
 
-    def __int__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
@@ -41,6 +44,15 @@ class ShopUserRegisterForm(UserCreationForm):
 
         return current_email
 
+    def save(self):
+        user = super(ShopUserRegisterForm, self).save()
+
+        user.is_active = False
+        salt = sha1(str(random()).encode('utf8')).hexdigest()[:6]
+        user.activation_key = sha1((user.email + salt).encode('utf8')).hexdigest()
+        user.save()
+        return user
+
 
 class ShopUserEditForm(UserChangeForm):
 
@@ -48,7 +60,7 @@ class ShopUserEditForm(UserChangeForm):
         model = ShopUser
         fields = ('username', 'first_name', 'last_name', 'email', 'age', 'avatar', 'password',)
 
-    def __int__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
@@ -69,3 +81,15 @@ class ShopUserEditForm(UserChangeForm):
             raise forms.ValidationError('Пользователь с таким email уже зарегистрирован')
 
         return current_email
+
+
+class ShopUserProfileEditForm(forms.ModelForm):
+
+    class Meta:
+        model = ShopUserProfile
+        fields = ('tagline', 'aboutMe', 'gender')
+
+    def __init__(self, *args, **kwargs):
+        super(ShopUserProfileEditForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'
