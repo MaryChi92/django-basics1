@@ -3,6 +3,7 @@ from django.db import models
 
 from mainapp.models import Product
 
+
 class Order(models.Model):
     FORMING = 'FM'
     SENT_TO_PROCEED = 'STP'
@@ -26,7 +27,7 @@ class Order(models.Model):
     updated = models.DateTimeField(verbose_name='обновлен', auto_now=True)
     is_active = models.BooleanField(verbose_name='активен', default=True)
 
-    status = models.CharField(verbose_name='статус', max_length=3, choices=ORDER_STATUS_CHOICES)
+    status = models.CharField(verbose_name='статус', max_length=3, choices=ORDER_STATUS_CHOICES, default=FORMING)
 
     class Meta:
         ordering = ('-created',)
@@ -68,3 +69,8 @@ class OrderItem(models.Model):
     @staticmethod
     def get_item(pk):
         return OrderItem.objects.filter(pk=pk).first()
+
+    def delete(self):
+        self.product.quantity += self.quantity
+        self.product.save()
+        super().delete()
